@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,5 +9,26 @@
 </head>
 <body>
 
+	<form action="/web/user/user_insert_ok.jsp">
+		이름 : <input type="text" id="name" name="name"> <br>
+		아이디 : <input type="text" id="id" name="id"> <br>
+
+		<button>입력</button>
+	</form>
+
+<script>
+	function userInsert(){
+		var num = window.document.getElementById("num").value;		
+		var name = document.getElementById('name').value;
+		var id = document.getElementById('id').value;
+		
+		var str = 'num : ' + num + ', name : ' + name + ', id : ' + id;
+		
+				
+		
+		
+	}
+</script>
+	
 </body>
 </html>
