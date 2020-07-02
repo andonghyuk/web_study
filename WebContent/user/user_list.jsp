@@ -30,22 +30,22 @@ ResultSet rs = stmt.executeQuery(sql);
 
 <%
 while(rs.next()){
-%>
+%> 
 	<tr>
 		<td><input type="checkbox" name="chk" value="<%=rs.getInt("num")%>"></td>
-		<td><%=rs.getInt("num")%></td>
-		<td><%=rs.getString("name")%></td>
-		<td><%=rs.getString("id")%></td>
+		<td><a href="/web/user/user_update.jsp?num=<%=rs.getInt("num")%>"><%=rs.getInt("num")%></a></td>
+		<td><a href="/web/user/user_update.jsp?num=<%=rs.getInt("num")%>"><%=rs.getString("name")%></a></td>
+		<td><a href="/web/user/user_update.jsp?num=<%=rs.getInt("num")%>"><%=rs.getString("id")%></a></td>
 	</tr>
 <%
 }
 %>
 </table>
 <button>삭제</button>
+
 </form>
 
 <script>
-	
 	function checkAll(){
 		var obj = document.getElementById('chk_all');
 		var objs = document.getElementsByName('chk');
